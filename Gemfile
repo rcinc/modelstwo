@@ -3,14 +3,10 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
-
-group :development do |variable|
-  gem 'sqlite3'
-end
+gem "pg"
 
 group :production do
   gem "rails_12factor"
-  gem "pg"
 end
 
 # Use SCSS for stylesheets
