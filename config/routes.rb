@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  post "/search" => "users#search"
+  resources :users
   root "home#index"
-  
+  get "/index2" => 'home#index2'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

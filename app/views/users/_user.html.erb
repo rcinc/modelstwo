@@ -1,0 +1,32 @@
+
+<%= div_for user do %>
+  <h2>Hello <%= user.name %>!</h2>
+  <p>Updated <%= time_ago_in_words user.updated_at %> ago.</p>
+  <p>Created <%= time_ago_in_words user.created_at %> ago.</p>
+<% end %>
+
+<div>
+<% text = "Wyncoders love to innovate in all the ways." %>
+<%= wyncodify(text) %>
+</div>
+
+<br>
+
+
+<% text = "Sweet roll gummies cake. Brownie carrot cake candy canes. Chupa chups sweet roll jujubes icing topping gummi bears wafer powder gingerbread. Pastry jelly candy canes muffin gingerbread gummies. Tootsie roll jelly-o candy canes gummi bears biscuit cookie sweet roll lollipop. Powder soufflé pie cheesecake jelly-o muffin fruitcake. Biscuit dragée muffin donut fruitcake lemon drops jujubes lollipop marzipan. Cotton candy bear claw pie chocolate bar lollipop sesame snaps macaroon.
+
+Bear claw candy chupa chups jelly beans jelly beans cake. Chocolate cake cupcake cake chocolate toffee lemon drops. Tart gummi bears cheesecake topping pudding cake halvah. Jujubes powder oat cake brownie dragée cupcake macaroon carrot cake. Lemon drops powder macaroon bonbon sugar plum dragée. Chupa chups chupa chups dessert dessert liquorice caramels lemon drops. Brownie bonbon cake. Sugar plum liquorice sweet sweet jelly beans tiramisu sweet halvah.
+
+Sweet roll jelly cotton candy tiramisu ice cream lemon drops tiramisu chocolate. Bear claw sesame snaps cotton candy. Pastry macaroon tootsie roll jelly-o. Dragée brownie soufflé. Fruitcake cookie toffee jujubes marshmallow chupa chups tootsie roll powder. Liquorice jelly beans tart bear claw. Candy canes sweet apple pie. Ice cream tootsie roll chocolate bar candy candy dessert. Topping brownie candy canes.
+
+Gummi bears jelly cake jelly-o cotton candy donut sugar plum oat cake. Sweet caramels candy canes biscuit chocolate croissant gingerbread. Jujubes chocolate dessert chupa chups icing. Sweet lollipop carrot cake brownie croissant pastry carrot cake chocolate halvah. Macaroon cupcake wafer sweet bonbon croissant bear claw. Gingerbread fruitcake muffin. Jelly beans pudding halvah halvah oat cake halvah jelly-o apple pie gummi bears. Topping donut cake gingerbread biscuit. Chocolate danish cake. Gummi bears cheesecake sugar plum cheesecake croissant brownie marzipan marshmallow.
+
+Cake lemon drops biscuit pie macaroon marshmallow ice cream toffee brownie. Donut halvah brownie chupa chups chocolate tootsie roll croissant gummies. Bonbon lemon drops chocolate cake croissant dragée. Cupcake lollipop jelly brownie candy canes danish jelly sesame snaps. Cupcake tart jelly-o cupcake fruitcake. Gummies apple pie chocolate cake marshmallow lemon drops lemon drops dessert. Icing macaroon cupcake jelly beans gummi bears tart oat cake chocolate cake soufflé. Gummies cake dessert apple pie tootsie roll. Cheesecake marzipan gingerbread sesame snaps bear claw caramels marshmallow.
+" %>
+
+<%= simple_format(
+      word_wrap(text, line_width: 40),
+      { id: "custom_wrapper" },
+      { wrapper_tag: "div" }
+    )
+%>
